@@ -5,9 +5,11 @@ import { LoginComponent } from './pages/login/login.component';
 import { CatalogoComponent } from './pages/catalogo/catalogo.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
-  { path: "catalogo", component: CatalogoComponent },
-  { path: 'login', component: LoginComponent}
+  { path: 'catalogo', component: CatalogoComponent },
+  { path: 'login', component: LoginComponent},
+  { path: '**', redirectTo: '/home' }
 ];
 
 @NgModule({
