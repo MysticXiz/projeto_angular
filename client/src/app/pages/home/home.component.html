@@ -1,6 +1,42 @@
-<p>home works!</p>
+<!--Carrossel  na parte de cima da pagina-->
+
+<div class="container-fluid-" id="divmain">
+  <!-- Início do container fluid -->
+  <div class="container" id="containerfixo">
+    <!--Container fixo dentro do fluid-->
+    <!--Inicio container das imagens-->
+    <div class="imagem">
+      <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+          
+          <div class="imagemnocentro">
+            <h1>Livros mais lidos da semana</h1>
+          <div *ngFor="let book of books; let i = index" class="carousel-item" [class.active]="i === 0">
+            <div class="row">
+              <div class="col-md-4">
+                <img [src]="book.volumeInfo.imageLinks.thumbnail" class="d-block w-100" alt="{{book.volumeInfo.title}}">
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+       
+      </div>
 
 
 
+    </div>
+    <!--Fim container das imagens-->
+  </div>
 
-<router-outlet></router-outlet>
+
+  <button class="carousel-control-prev custom-carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next custom-carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
