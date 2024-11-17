@@ -6,8 +6,8 @@
 
 footer {
     margin-top: auto; /* Empurra o rodapé para a parte inferior do contêiner */
-    padding: 1rem 0; /* Adiciona espaço interno (padding) acima e abaixo do rodapé */
+    padding-top: 1rem 0; /* Adiciona espaço interno (padding) acima e abaixo do rodapé */
     text-align: center; /* Centraliza o texto dentro do rodapé */
     width: 100%; /* Faz o rodapé ocupar toda a largura do contêiner */
-    
+
 }

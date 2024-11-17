@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
+temlivros = true
+livros: any[] = []
+ngOnInit(): void {
+  fetch('')
+    .then(response => response.json())
+    .then(data => {
+      this.livros = data.docs
+    })
+    .catch(error => {
+      console.error('Erro ao buscar livros:', error)
+    });
+    console.log(this.livros)
 }
+
+constructor(){}
+}
+// https://openlibrary.org/search.json?q=bestsellers&limit=20
