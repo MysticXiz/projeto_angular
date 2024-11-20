@@ -1,1 +1,52 @@
-<p>catalogo works!</p>
+<div class="catalogo-home" style="background-color: black; min-height: 100vh;">
+    <p class="fs-1">Pesquisar</p>
+    <div class="texto2">Livros</div>
+    <img src="https://wallpapers-hub.art/wallpaper-images/235881.jpg" alt="Descrição da imagem" class="img-fluid">
+</div>
+
+
+
+
+
+
+<div class="catalogo-home" style="background-color: black; min-height: 100vh;">
+    <p class="fs-1 text-white">Pesquisar</p>
+    <div class="texto2 text-white">Livros</div>
+    <div id="livrosCarousel" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-inner">
+        <div *ngFor="let livro of livros; let i = index" class="carousel-item" [class.active]="i === 0">
+          <div class="d-flex justify-content-center">
+            <div class="card bg-dark text-white mx-2">
+              <img *ngIf="livro.cover_i" 
+                   [src]="'https://covers.openlibrary.org/b/id/' + livro.cover_i + '-L.jpg'" 
+                   class="card-img-top" 
+                   alt="Capa do livro">
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#livrosCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#livrosCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  
+
+
+  <div *ngFor="let livro of livros; let i = index" 
+     class="carousel-item" 
+     [class.active]="isActive(i)">
+  <div class="d-flex justify-content-center">
+    <div class="card bg-dark text-white mx-2">
+      <img *ngIf="livro.cover_i" 
+           [src]="'https://covers.openlibrary.org/b/id/' + livro.cover_i + '-L.jpg'" 
+           class="card-img-top" 
+           alt="Capa do livro">
+    </div>
+  </div>
+</div>

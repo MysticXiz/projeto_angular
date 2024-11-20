@@ -9,7 +9,7 @@ export class HomeComponent {
 temlivros = true
 livros: any[] = []
 ngOnInit(): void {
-  fetch('')
+  fetch('https://openlibrary.org/search.json?q=bestsellers&limit=20')
     .then(response => response.json())
     .then(data => {
       this.livros = data.docs

@@ -2,6 +2,7 @@
     display: flex; /* Permite organizar os elementos em uma coluna */
     flex-direction: column; /* Organiza os elementos em uma coluna (de cima para baixo) */
     min-height: 100vh; /* Garante que o contêiner ocupe pelo menos 100% da altura da tela */
+    color: black;
 }
 
 footer {
