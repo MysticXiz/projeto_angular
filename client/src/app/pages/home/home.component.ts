@@ -1,47 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../api.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
-temlivros = true
-livros: any[] = []
-slides : any[] = [{
-  "id": "1",
-  "nome": "Livro 1",
-},
-{
-  "id": "2",
-  "nome": "Livro 2",
-},
-{
-  "id": "3",
-  "nome": "Livro 3",
-},
-{
-  "id": "4",
-  "nome": "Livro 4",
-},
-{
-  "id": "5",
-  "nome": "Livro 5",
-},
-]
-ngOnInit(): void {
-  fetch('')
-    .then(response => response.json())
-    .then(data => {
-      this.livros = data.docs
-    })
-    .catch(error => {
-      console.error('Erro ao buscar livros:', error)
-    });
-    console.log(this.livros)
-}
+export class HomeComponent implements OnInit {
+  livros: any[] = [];
+  temlivros = true;
 
+  constructor(private apiService: ApiService) {}
 
-constructor(){}
+  ngOnInit(): void {
+    this.apiService.getData().subscribe(
+      (data) => {
+        this.livros = data.docs; // Acessando os dados retornados
+        //console.log(this.livros); para exibir os dados no console
+      },
+      (error) => {
+        console.error('Erro ao buscar livros:', error);
+      }
+    );
+  }
 }
-// https://openlibrary.org/search.json?q=bestsellers&limit=20

@@ -3,7 +3,6 @@
 }
 .card-img-top{
   height: 240px;
-
 }
 .cardlink{
   width: 200px;
@@ -18,13 +17,11 @@
 .mt-1{
   margin-top: 16px !important;
 }
-
 .row{
   margin-right: 0;
   margin-left: 0;
 }
 .textoLivros{
-
   font-size: 1.2rem;
   color: gray;
 }
@@ -34,7 +31,4 @@
 .card-header{
   font-size: 1.6em;
   color: rgb(80, 80, 80);
-}
-.carousel-control-next-icon{
-
 }

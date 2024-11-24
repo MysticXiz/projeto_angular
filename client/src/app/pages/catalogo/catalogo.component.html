@@ -1,1 +1,47 @@
-<p>catalogo works!</p>
+<div class="container-fluid">
+<div class="catalogo-home" style="background-color: black; min-height: 100vh;">
+  <div class="texto-container">
+    <p class="fs-1">Pesquisar</p>
+    <hr class="divider">
+    <div class="texto2" class="fs-2">Livros</div>
+    <div class="texto3" class="fs-3">Pesquise seus livros favoritos</div>
+  </div>
+    <img src="https://wallpapers-hub.art/wallpaper-images/235881.jpg" alt="imagem de fundo" class="img-fluid">
+</div>
+</div>
+
+<div class="container">
+  <div class="row d-flex">
+    <div class="row col-12 col-lg-8 g-3">
+      <div *ngFor="let livro of livros" class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+        <a href="#"  [title]="livro.title" [routerLink]="['/livros', livro._id]">
+          <div class="card">
+            <!--  capa do livro -->
+            <img *ngIf="livro.cover_i" [src]="'https://covers.openlibrary.org/b/id/' + livro.cover_i + '-L.jpg'"  class="card-img-top" alt="Capa do livro">
+            <!-- Footer com título e autor -->
+            <div class="card-footer d-flex flex-column justify-content-between">
+              <div class="d-flex flex-column">
+                <small class="text-body-primary fs-6" >{{ livro.title }}</small>
+                <small class="text-body-secondary">{{ livro.author_name ? livro.author_name.join(', ') :  'Desconhecido' }}</small>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div *ngIf="temlivros" class="d-none d-lg-flex col-4 height position-sticky top-0 mt-1" >
+      <div class="card col-12 mt-1">
+          <div class="card-header d-flex justify-content-center ">
+            Lista de
+          </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0 d-flex justify-content-center">
+              <p class="textoLivros mt-2 ">Lista vazia</p>
+            </blockquote>
+          </div>
+        </div>
+
+
+
+
+

@@ -2,3 +2,12 @@
    /* Destaca o link ativo */
   color: #000000; /* Cor personalizada para o link ativo */
 }
+.navbar-brand{
+    color: rgb(28, 183, 255);
+    WIDTH: 8%;
+    border-radius: 15%;
+}
+
+.mudaracor{
+    color: rgb(28, 183, 255);
+}

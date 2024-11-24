@@ -1,23 +1,13 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, OnInit, OnDestroy, Renderer2 } from '@angular/core';
 
-import { CatalogoComponent } from './catalogo.component';
+@Component({
+  selector: 'app-catalogo',
+  templateUrl: './catalogo.component.html',
+  styleUrls: ['./catalogo.component.css']
+})
+export class CatalogoComponent  {
 
-describe('CatalogoComponent', () => {
-  let component: CatalogoComponent;
-  let fixture: ComponentFixture<CatalogoComponent>;
+  
+  constructor(){}
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [CatalogoComponent]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(CatalogoComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+}
