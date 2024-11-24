@@ -1,1 +1,4 @@
-
+.nav-link.active {
+   /* Destaca o link ativo */
+  color: #000000; /* Cor personalizada para o link ativo */
+}

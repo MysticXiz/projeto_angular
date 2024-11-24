@@ -1,58 +1,20 @@
 <nav class="navbar p-3">
   <div class="container">
-    <a routerLink="home" href="" class="navbar-brand"> HOME </a>
-    <div class="col-4 flex-row d-none d-md-flex">
-      <button class="form-control text-start"
-      data-bs-toggle="modal"
-      data-bs-target="#searchModal">
-      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-search me-2" viewBox="0 0 16 16">
-        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-      </svg>
-      Pesquisar
-    </button>
-      <div
-        class="modal"
-        id="searchModal"
-        tabindex="-1"
-        aria-labelledby="searchModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-body">
-              <form>
-                <div class="mb-3">
-                  <input
-                    type="search"
-                    class="form-control"
-                    placeholder="Digite sua pesquisa"
-                    autofocus
-                    />
-                </div>
-                <button type="submit" class="btn btn-outline-success">
-                  Pesquisar
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <a href="#" class="navbar-brand" href="#" routerLink="/home">HOME</a>
+    <ul class="navbar-nav d-flex flex-row gap-5">
+      <li class="nav-item">
+        <a class="nav-link" href="#" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" routerLink="/catalogo" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" routerLinkActive="ativo" [routerLinkActiveOptions]="{ exact: false }">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" routerLinkActive="ativo" [routerLinkActiveOptions]="{ exact: false }">Disabled</a>
+      </li>
+    </ul>
 
-    <div class="dropdown d-flex flex-row gap-5">
-      <a
-        href="#"
-        class="dropdown-toggle btn btn-outline-success"
-        data-bs-toggle="dropdown"
-        role="button"
-        aria-expanded="false"
-      >
-      </a>
-      <ul class="dropdown-menu dropdown-menu-end">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
-    </div>
   </div>
 </nav>

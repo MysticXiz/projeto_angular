@@ -1,3 +1,32 @@
+<div id="carouselWithDetails" class="carousel slide carousel-fade " data-bs-ride="carousel" style="background-color: black;">
+  <div class="carousel-inner ">
+    <!-- Slide 1 -->
+    <div *ngFor="let slide of slides" class="carousel-item active mt-1 max-height: 330px;">
+      <div class="card mb-3" style="max-width: 1000px; margin: auto; max-height: 330px;">
+        <div class="row g-0 " style="text-overflow:ellipsis; overflow: hidden; max-height: 330px;">
+          <div class="col " style="max-height: 330px;">
+            <img src="https://placehold.co/400x400/orange/white" class="img-fluid rounded-start" alt="..." width="">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body " style="max-height: 200px;">
+              <h5 class="card-title">{{slide.nome}}</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores nulla beatae exercitationem molestiae! Rerum, cumque? Autem id quisquam esse quibusdam, ad neque, sapiente voluptatem et debitis optio quo fugiat possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, velit esse neque harum ex tenetur sapiente dolores at eos excepturi non eaque voluptates, aspernatur nobis perferendis minus quam, culpa architecto!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos excepturi recusandae, cum nemo fugiat distinctio facilis repellat laborum illum. Maiores vitae, quidem dolores illo amet eius quis ad libero in?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores nulla beatae exercitationem molestiae! Rerum, cumque? Autem id quisquam esse quibusdam, ad neque, sapiente voluptatem et debitis optio quo fugiat possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, velit esse neque harum ex tenetur sapiente dolores at eos excepturi non eaque voluptates, aspernatur nobis perferendis minus quam, culpa architecto!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos excepturi recusandae, cum nemo fugiat distinctio facilis repellat laborum illum. Maiores vitae, quidem dolores illo amet eius quis ad libero in?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores nulla beatae exercitationem molestiae! Rerum, cumque? Autem id quisquam esse quibusdam, ad neque, sapiente voluptatem et debitis optio quo fugiat possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, velit esse neque harum ex tenetur sapiente dolores at eos excepturi non eaque voluptates, aspernatur nobis perferendis minus quam, culpa architecto!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos excepturi recusandae, cum nemo fugiat distinctio facilis repellat laborum illum. Maiores vitae, quidem dolores illo amet eius quis ad libero in?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores nulla beatae exercitationem molestiae! Rerum, cumque? Autem id quisquam esse quibusdam, ad neque, sapiente voluptatem et debitis optio quo fugiat possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, velit esse neque harum ex tenetur sapiente dolores at eos excepturi non eaque voluptates, aspernatur nobis perferendis minus quam, culpa architecto!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos excepturi recusandae, cum nemo fugiat distinctio facilis repellat laborum illum. Maiores vitae, quidem dolores illo amet eius quis ad libero in?</p>
+              <p class="card-text"><small class="text-body-secondary">Updated 5 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" style="background-color: black;" type="button" data-bs-target="#carouselWithDetails" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" style="background-color: black;" type="button" data-bs-target="#carouselWithDetails" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
 
 <div class="container  mt-1">
   <div class="row d-flex">
