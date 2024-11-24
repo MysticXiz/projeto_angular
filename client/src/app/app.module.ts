@@ -9,6 +9,7 @@ import { CatalogoComponent } from './pages/catalogo/catalogo.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SecaoLivrosComponent } from './components/secao-livros/secao-livros.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './components/footer/footer.component';
     CatalogoComponent,
     LoginComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SecaoLivrosComponent
   ],
   imports: [
     BrowserModule,

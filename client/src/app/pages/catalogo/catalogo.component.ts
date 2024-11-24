@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-catalogo',
   templateUrl: './catalogo.component.html',
   styleUrl: './catalogo.component.css'
-  
+
 })
 export class CatalogoComponent {
   temlivros = true
@@ -20,7 +20,7 @@ export class CatalogoComponent {
       });
       console.log(this.livros)
   }
-  
+
 
 
   activeIndex: number = 0;
