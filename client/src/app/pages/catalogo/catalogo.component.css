@@ -1,127 +1,158 @@
 ::ng-deep body {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 .catalogo-home {
-    position: relative;
-    height: auto;
-    min-height: 500px;
-    min-width: 450px;
-    object-fit: cover;
+  position: relative;
+  height: auto;
+  min-height: 500px;
+  min-width: 450px;
+  object-fit: cover;
 
 }
 
 
 
-.img-fluid {
-    filter: brightness(0.7) blur(6px);
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    position: relative;
+#primeiraimagem {
+  filter: brightness(0.7) blur(6px);
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  position: relative;
 }
 
-.fs-1 {
-    position: absolute;
-    top: 15%; /* Ajuste este valor conforme necessário */
-    left: 15%; /* Ajuste este valor conforme necessário */
-    color: white; /* Certifique-se de que o texto é visível sobre a imagem */
-    z-index: 3; /* Garante que o texto fique por cima da imagem */
-    font-size: 5vw;
-    
+#image-container {
+  position: relative;
+  overflow: hidden; /* Para esconder a parte da imagem que vai sumir */
+}
+
+#segundaimagem {
+  filter: brightness(1) blur(1px);
+  
+  margin-top: 10%;
+  position: relative;
+  
 }
 
 
 
 
-.fs-2 {
+#Pesquisar {
   position: absolute;
-  top: 21%; /* Ajuste este valor conforme necessário */
+  top: 15%; /* Ajuste este valor conforme necessário */
   left: 15%; /* Ajuste este valor conforme necessário */
   color: white; /* Certifique-se de que o texto é visível sobre a imagem */
   z-index: 3; /* Garante que o texto fique por cima da imagem */
-  font-size: 1000%;
+  font-size: 5vw;
+  
 }
 
-.fs-3 {
+
+
+
+#texto2 {
+position: absolute;
+top: 22%; /* Ajuste este valor conforme necessário */
+left: 15%; /* Ajuste este valor conforme necessário */
+color: white; /* Certifique-se de que o texto é visível sobre a imagem */
+z-index: 3; /* Garante que o texto fique por cima da imagem */
+font-size: 1000%;
+}
+
+#texto3 {
+position: absolute;
+top: 30%; /* Ajuste este valor conforme necessário */
+left: 15%; /* Ajuste este valor conforme necessário */
+color: white; /* Certifique-se de que o texto é visível sobre a imagem */
+z-index: 3; /* Garante que o texto fique por cima da imagem */
+font-size: 500%;
+}
+
+#transicaotexto {
   position: absolute;
-  top: 30%; /* Ajuste este valor conforme necessário */
-  left: 15%; /* Ajuste este valor conforme necessário */
-  color: white; /* Certifique-se de que o texto é visível sobre a imagem */
-  z-index: 3; /* Garante que o texto fique por cima da imagem */
-  font-size: 500%;
+  margin-top: 30%;
+  z-index: 3;
+  text-align: center;
 }
 
 
 
 
 .divider {
-  border: none; /* Remove a borda padrão */
-  height: 3px; /* Altura da linha */
-  background-color: rgb(255, 255, 255); /* Cor da linha */
-  margin: 10px 0; /* Espaçamento acima e abaixo da linha */
-  width: 30%; /* Largura da linha */
-  position: absolute; /* Para posicionar a linha corretamente */
-  left: 10%; /* Para centralizar a linha */
-  top: 20%;
-  z-index: 3;
+border: none; /* Remove a borda padrão */
+height: 3px; /* Altura da linha */
+background-color: rgb(255, 255, 255); /* Cor da linha */
+margin: 10px 0; /* Espaçamento acima e abaixo da linha */
+width: 30%; /* Largura da linha */
+position: absolute; /* Para posicionar a linha corretamente */
+left: 10%; /* Para centralizar a linha */
+top: 20%;
+z-index: 3;
 }
 
 
 
 @media (max-width: 1200px) {
-  .fs-1 {
-    font-size: 10vw; /* Reduz o tamanho da fonte em telas menores */
-    top: 10%; /* Ajuste este valor conforme necessário */
-    left: 15%;
-    
-  }
+#Pesquisar {
+  font-size: 10vw; /* Reduz o tamanho da fonte em telas menores */
+  top: 8%; /* Ajuste este valor conforme necessário */
+  left: 15%;
+  
+}
 
-  .fs-2 {
-    font-size: 8vw; /* Reduz o tamanho da fonte em telas menores */
-    top: 15%; /* Ajuste este valor conforme necessário */
-    left: 15%;
-  }
+#texto2{
+  font-size: 8vw; /* Reduz o tamanho da fonte em telas menores */
+  top: 15%; /* Ajuste este valor conforme necessário */
+  left: 15%;
+}
 
-  .divider {
-    width: 25%;
-    top: 14%;
-  }
+.divider {
+  width: 25%;
+  top: 14%;
+}
 
 
-  .fs-3 {
-    font-size: 8vw; /* Reduz o tamanho}*/
-    top: 20%;
-    left: 15%;
-    font-size: 3vw;
+.texto3 {
+  font-size: 8vw; /* Reduz o tamanho}*/
+  top: 20%;
+  left: 15%;
+  font-size: 3vw;
 }
 }
 
 @media (max-width: 600px){
-  .fs-1 {
-    font-size: 4vw; /* Reduz o tamanho da fonte em telas menores */
-    top: 5%; /* Ajuste este valor conforme necessário */
-    left: 11%;
-}
- 
-  .fs-2 {
-    font-size: 2vw; /* Reduz o tamanho da fonte em telas menores */
-    top: 9%; /* Ajuste este valor conforme necessário */
-    left: 10%;
-  }
-
-  .divider {
-    width: 25%;
-    top: 8%;
-  }
-
-  .fs-3 {
-    font-size: 3%; /* Reduz o tamanho}*/
-    top: 12%;
-    left: 3%;
-    right: 3%;
-}
+#Pesquisar {
+  font-size: 4vw; /* Reduz o tamanho da fonte em telas menores */
+  top: 3%; /* Ajuste este valor conforme necessário */
+  left: 11%;
 }
 
+#texto2 {
+  font-size: 2vw; /* Reduz o tamanho da fonte em telas menores */
+  top: 9%; /* Ajuste este valor conforme necessário */
+  left: 10%;
+}
+
+.divider {
+  width: 25%;
+  top: 8%;
+}
+
+#texto3 {
+  font-size: 3%; /* Reduz o tamanho}*/
+  top: 14%;
+  left: 3%;
+  right: 3%;
+}
+}
+
+
+#ficcao {
+
+  margin-top: 6%;
+  margin-left: 18%;
+  margin-bottom: 1%;
+
+}
 

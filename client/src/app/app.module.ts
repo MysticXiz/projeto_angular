@@ -10,6 +10,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SecaoLivrosComponent } from './components/secao-livros/secao-livros.component';
+import { SecaoLivrosficcaoComponent } from './components/secao-livrosficcao/secao-livrosficcao.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SecaoLivrosComponent } from './components/secao-livros/secao-livros.com
     LoginComponent,
     HeaderComponent,
     FooterComponent,
-    SecaoLivrosComponent
+    SecaoLivrosComponent,
+    SecaoLivrosficcaoComponent
   ],
   imports: [
     BrowserModule,
