@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SecaoLivrosComponent } from './components/secao-livros/secao-livros.component';
 import { SecaoLivrosficcaoComponent } from './components/secao-livrosficcao/secao-livrosficcao.component';
+import { UppercasePipe } from './uppercase.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SecaoLivrosficcaoComponent } from './components/secao-livrosficcao/seca
     HeaderComponent,
     FooterComponent,
     SecaoLivrosComponent,
-    SecaoLivrosficcaoComponent
+    SecaoLivrosficcaoComponent,
+    UppercasePipe
   ],
   imports: [
     BrowserModule,

@@ -9,7 +9,7 @@
               <!-- Footer com título e autor -->
               <div class="card-footer d-flex flex-column justify-content-between">
                 <div class="d-flex flex-column">
-                  <small class="text-body-primary fs-6" >{{ livro.title }}</small>
+                  <small class="text-body-primary fs-6" >{{ livro.title | uppercase}}</small>
                   <small class="text-body-secondary">{{ livro.author_name ? livro.author_name.join(', ') :  'Desconhecido' }}</small>
                 </div>
               </div>
