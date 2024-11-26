@@ -5,7 +5,7 @@
     height: 240px;
   }
   .cardlink{
-    width: 200px;
+    width: 300px;
   }
   .card-footer .text-body-primary,
   .card-footer .text-body-secondary {
@@ -32,4 +32,8 @@
     font-size: 1.6em;
     color: rgb(80, 80, 80);
   }
-  
+
+  .col-lg-2 {
+    padding-left: 15px; 
+    padding-right: 15px; 
+}

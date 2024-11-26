@@ -1,7 +1,7 @@
 <div class="container  mt-1">
     <div class="row d-flex">
       <div class="row col-12 col-lg-8 g-3">
-        <div *ngFor="let livro of livros" class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+        <div *ngFor="let livro of livros" class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 ">
           <a href="#"  [title]="livro.title" [routerLink]="['/livros', livro._id]">
             <div class="card">
               <!--  capa do livro -->
