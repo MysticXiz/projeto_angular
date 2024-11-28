@@ -53,7 +53,7 @@ src/
       home/
     services/
       api/
-      custom.css
+      
 ```
 
 - **components/**: Contém os componentes da aplicação.
