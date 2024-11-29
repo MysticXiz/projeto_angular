@@ -5,13 +5,13 @@ import { ApiService } from '../../services/api/api.service';
   templateUrl: './secao-livros.component.html',
   styleUrl: './secao-livros.component.css'
 })
-export class SecaoLivrosComponent {
+export class SecaoLivrosComponent implements OnInit {
  
  
   livros: any[] = [];
   
   temlivros = true;
-/*
+
   constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
@@ -25,8 +25,7 @@ export class SecaoLivrosComponent {
       }
     );
   }
-    */
-  constructor(private apiService: ApiService) {}
+    
 }
 
 
