@@ -3,150 +3,6 @@
   color: white;
 }
 
-.catalogo-home {
-  position: relative;
-  height: auto;
-  min-height: 500px;
-  min-width: 450px;
-  object-fit: cover;
-
-}
-
-
-
-#primeiraimagem {
-  filter: brightness(0.7) blur(6px);
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  position: relative;
-}
-
-#image-container {
-  position: relative;
-  overflow: hidden; /* Para esconder a parte da imagem que vai sumir */
-}
-
-#segundaimagem {
-  filter: brightness(1) blur(1px);
-  
-  margin-top: 10%;
-  position: relative;
-  
-}
-
-
-
-
-#Pesquisar {
-  position: absolute;
-  top: 15%; /* Ajuste este valor conforme necessário */
-  left: 15%; /* Ajuste este valor conforme necessário */
-  color: white; /* Certifique-se de que o texto é visível sobre a imagem */
-  z-index: 3; /* Garante que o texto fique por cima da imagem */
-  font-size: 5vw;
-  
-}
-
-
-
-
-#texto2 {
-position: absolute;
-top: 22%; /* Ajuste este valor conforme necessário */
-left: 15%; /* Ajuste este valor conforme necessário */
-color: white; /* Certifique-se de que o texto é visível sobre a imagem */
-z-index: 3; /* Garante que o texto fique por cima da imagem */
-font-size: 1000%;
-}
-
-#texto3 {
-position: absolute;
-top: 30%; /* Ajuste este valor conforme necessário */
-left: 15%; /* Ajuste este valor conforme necessário */
-color: white; /* Certifique-se de que o texto é visível sobre a imagem */
-z-index: 3; /* Garante que o texto fique por cima da imagem */
-font-size: 500%;
-}
-
-#transicaotexto {
-  position: absolute;
-  margin-top: 30%;
-  z-index: 3;
-  text-align: center;
-}
-
-
-
-
-.divider {
-border: none; /* Remove a borda padrão */
-height: 3px; /* Altura da linha */
-background-color: rgb(255, 255, 255); /* Cor da linha */
-margin: 10px 0; /* Espaçamento acima e abaixo da linha */
-width: 30%; /* Largura da linha */
-position: absolute; /* Para posicionar a linha corretamente */
-left: 10%; /* Para centralizar a linha */
-top: 20%;
-z-index: 3;
-}
-
-
-
-@media (max-width: 1200px) {
-#Pesquisar {
-  font-size: 10vw; /* Reduz o tamanho da fonte em telas menores */
-  top: 8%; /* Ajuste este valor conforme necessário */
-  left: 15%;
-  
-}
-
-#texto2{
-  font-size: 8vw; /* Reduz o tamanho da fonte em telas menores */
-  top: 15%; /* Ajuste este valor conforme necessário */
-  left: 15%;
-}
-
-.divider {
-  width: 25%;
-  top: 14%;
-}
-
-
-.texto3 {
-  font-size: 8vw; /* Reduz o tamanho}*/
-  top: 20%;
-  left: 15%;
-  font-size: 3vw;
-}
-}
-
-@media (max-width: 600px){
-#Pesquisar {
-  font-size: 4vw; /* Reduz o tamanho da fonte em telas menores */
-  top: 3%; /* Ajuste este valor conforme necessário */
-  left: 11%;
-}
-
-#texto2 {
-  font-size: 2vw; /* Reduz o tamanho da fonte em telas menores */
-  top: 9%; /* Ajuste este valor conforme necessário */
-  left: 10%;
-}
-
-.divider {
-  width: 25%;
-  top: 8%;
-}
-
-#texto3 {
-  font-size: 3%; /* Reduz o tamanho}*/
-  top: 14%;
-  left: 3%;
-  right: 3%;
-}
-}
-
 
 #ficcao {
 
@@ -156,3 +12,149 @@ z-index: 3;
 
 }
 
+#bookicon{
+
+  position: absolute;
+  margin-top: 19%;
+  z-index: 3;
+  width: 9%;
+  margin-left: 45%;
+
+}
+
+
+#textonome{
+  position: absolute;
+  margin-top: 12%;
+  margin-left: 41%;
+  z-index: 5;
+  text-align: left;
+  
+  font-size: 4px;
+  padding: 5px;
+}
+
+#transicao1{
+  padding-top: 5%;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+#imagem-container {
+  background-image: url(../../../../public/imagens/landscape2.jpg); 
+  background-size: cover; /* Faz a imagem cobrir toda a div */
+  background-position: center; 
+  width: 100%; 
+  height: 430px; 
+  position: relative; 
+  color: white; 
+  padding: 20px; 
+  box-sizing: border-box; 
+  margin: 0; 
+  min-height: 50px;
+    min-width: 450px;
+    margin-left: 0%;
+}
+
+
+
+
+.imagem-sobreposta {
+  position: absolute; 
+  
+  top: 10%; 
+  left: 39%; 
+  width: 7%; 
+  height: auto; 
+  z-index: 1; 
+}
+
+.texto-container {
+  position: relative; 
+  z-index: 2; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 5px; 
+}
+
+.titulo {
+  font-size: 5vw; 
+}
+
+.descricao {
+  font-size: 3vw; 
+  margin-top: 8%;
+}
+
+
+@media (max-width: 768px) {
+  .imagem-container {
+      height: 200px; 
+  }
+
+  .imagem-sobreposta {
+      width: 8%; 
+  }
+
+  .titulo {
+      font-size: 6vw;
+  }
+
+  .descricao {
+      font-size: 4vw; 
+  }
+}
+
+@media (max-width: 480px) {
+  .imagem-container {
+      height: 150px; 
+  }
+
+  .imagem-sobreposta {
+      width: 8%; 
+      margin-left: 10%;
+  }
+
+  .titulo {
+      font-size: 7vw; 
+  }
+
+  .descricao {
+      font-size: 5vw; 
+  }
+}
+
+@media (max-width: 300px) {
+  .imagem-sobreposta {
+    margin-top: -4%;
+}
+
+}
+
+
+
+
+
+@media (max-width: 151px) {
+  .imagem-sobreposta {
+    margin-left: 2%;
+    margin-top: -15;
+}
+
+}
+
+
+@media (max-width: 80px) {
+  .imagem-sobreposta {
+    margin-left: -19%;
+    margin-top: -18;
+}
+
+}

@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 
 })
 export class CatalogoComponent {
+  
+  /*
   temlivros = true
   livros: any[] = []
   ngOnInit(): void {
@@ -42,4 +44,6 @@ export class CatalogoComponent {
   isActive(index: number): boolean {
     return index === this.activeIndex;
   }
+
+  */
 }
