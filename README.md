@@ -53,6 +53,10 @@ src/
       home/
     services/
       api/
+    pipes
+      filtrar-resultados/
+    directives/
+      text-overflow-ellipsis/
       
 ```
 
