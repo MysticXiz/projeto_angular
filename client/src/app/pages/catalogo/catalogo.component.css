@@ -1,10 +1,8 @@
 ::ng-deep body {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
-body{
-  background: #1f2937;
-}
+
 .catalogo-home {
     position: relative;
     height: auto;
@@ -13,6 +11,8 @@ body{
     object-fit: cover;
 
 }
+
+
 
 .img-fluid {
     filter: brightness(0.7) blur(6px);
@@ -32,6 +32,9 @@ body{
 
 }
 
+
+
+
 .fs-2 {
   position: absolute;
   top: 21%; /* Ajuste este valor conforme necessário */
@@ -49,6 +52,10 @@ body{
   z-index: 3; /* Garante que o texto fique por cima da imagem */
   font-size: 500%;
 }
+
+
+
+
 .divider {
   border: none; /* Remove a borda padrão */
   height: 3px; /* Altura da linha */
@@ -60,43 +67,7 @@ body{
   top: 20%;
   z-index: 3;
 }
-*{
-  text-decoration: none;
-}
-.card-img-top{
-  height: 240px;
-}
-.cardlink{
-  width: 200px;
-}
-.card-footer .text-body-primary,
-.card-footer .text-body-secondary {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block;
-}
-.mt-1{
-  margin-top: 16px !important;
-}
-.mt-2{
-  margin-top: 3.35rem !important;
-}
-.row{
-  margin-right: 0;
-  margin-left: 0;
-}
-.textoLivros{
-  font-size: 1.2rem;
-  color: gray;
-}
-.height{
-  height: 75vh;
-}
-.card-header{
-  font-size: 1.6em;
-  color: rgb(80, 80, 80);
-}
+
 
 
 @media (max-width: 1200px) {
@@ -113,18 +84,17 @@ body{
     left: 15%;
   }
 
-  .divider {
-    width: 25%;
-    top: 14%;
+  .imagem-sobreposta {
+      width: 8%;
   }
 
+  .titulo {
+      font-size: 6vw;
+  }
 
-  .fs-3 {
-    font-size: 8vw; /* Reduz o tamanho}*/
-    top: 20%;
-    left: 15%;
-    font-size: 3vw;
-}
+  .descricao {
+      font-size: 4vw;
+  }
 }
 
 @media (max-width: 600px){
@@ -151,6 +121,5 @@ body{
     left: 3%;
     right: 3%;
 }
+
 }
-
-

@@ -60,7 +60,7 @@ export class CatalogoComponent {
     this.apiService.getData3().subscribe(
       (data) => {
         this.livros[2].itens = data.docs;
-        //console.log(this.livros); 
+        //console.log(this.livros);
       },
       (error) => {
         console.error('Erro ao buscar livros:', error);
