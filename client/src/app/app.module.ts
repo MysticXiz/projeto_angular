@@ -9,7 +9,10 @@ import { CatalogoComponent } from './pages/catalogo/catalogo.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { SecaoLivrosComponent } from './components/secao-livros/secao-livros.component';
+import { DetalhesLivrosComponent } from './pages/detalhes-livros/detalhes-livros.component';
+import { TextOverflowEllipsisDirective } from './directives/text-overflow-ellipsis/text-overflow-ellipsis.directive';
+import { CirculoCarregamentoComponent } from './components/circulo-carregamento/circulo-carregamento.component';
+import { FiltrarResultadosApiPipe } from './pipes/filtrar-resultados/filtrar-resultados-api.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { SecaoLivrosComponent } from './components/secao-livros/secao-livros.com
     LoginComponent,
     HeaderComponent,
     FooterComponent,
-    SecaoLivrosComponent
+    DetalhesLivrosComponent,
+    TextOverflowEllipsisDirective,
+    CirculoCarregamentoComponent,
+    FiltrarResultadosApiPipe,
   ],
   imports: [
     BrowserModule,

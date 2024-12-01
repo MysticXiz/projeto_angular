@@ -1,20 +1,103 @@
 <nav class="navbar p-3">
   <div class="container">
     <a href="#" class="navbar-brand" href="#" routerLink="/home">HOME</a>
-    <ul class="navbar-nav d-flex flex-row gap-5">
-      <li class="nav-item">
-        <a class="nav-link" href="#" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" routerLink="/catalogo" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }">Catálogo</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" routerLinkActive="ativo" [routerLinkActiveOptions]="{ exact: false }">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" routerLinkActive="ativo" [routerLinkActiveOptions]="{ exact: false }">Disabled</a>
-      </li>
-    </ul>
+    <!-- barra de pesquisa -->
+    <div class="col-lg-4 d-lg-flex d-none">
+      <button class="barraPesquisa text-start" data-bs-toggle="modal" data-bs-target="#searchModal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-search me-2"
+          viewBox="0 0 16 16">
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+        </svg>
+        Pesquisar
+      </button>
+    </div>
+    <div class="d-lg-none ms-auto me-3">
+      <button class="btn barraPesquisa" data-bs-toggle="modal" data-bs-target="#searchModal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-search"
+          viewBox="0 0 16 16">
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+        </svg>
+      </button>
+    </div>
+    <!-- modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body d-flex flex-column g-5" style="background-color: #1f2937; border-radius: 0.325rem">
+            <!-- barra de pesquisa dentro do modal-->
+            <div class="input-group mb-3">
+              <input type="search" class="form-control" placeholder="Digite o nome de um livro" autofocus style="
+                  background-color: rgba(255, 255, 255, 0.1);
+                  color: #d1d5db;
+                  border-color: #e4e4e421;
+                " (keydown.enter)="pesquisar(searchInput.value)" #searchInput />
+              <button class="btn btn-outline-light" style="border-color: #e4e4e421" type="button"
+                (keydown.enter)="pesquisar(searchInput.value)" (click)="pesquisar(searchInput.value)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+              </button>
+            </div>
+            <app-circulo-carregamento [mostrar]="carregando"></app-circulo-carregamento>
+            <!-- resultados de pesquisa -->
+            <div class="container m-0 p-0 d-flex flex-column" *ngIf="!carregando">
+              <div class="card d-flex flex-row mb-2" style="height: 100px" *ngFor="let resultado of resultados" data-bs-dismiss="modal">
+                <div class="col-2">
+                  <img [src]="
+                      'https://covers.openlibrary.org/b/id/' +
+                      resultado.cover_i +
+                      '-L.jpg'
+                    " class="img-fluid rounded-start" alt="Capa do livro" style="height: 100%; width: 100%" />
+                </div>
+                <div class="col-10">
+                  <div class="card-body px-3 py-2 d-flex flex-column g-3">
+                    <a [routerLink]="['/livros', resultado.edition_key[0]] " class="text-decoration-none">
+                      <h5 class="text-body-primary m-0" [title]="resultado.title">
+                        {{ resultado.title | filtrarResultadosApi }}
+                      </h5>
+                    </a>
+                    <p class="text-body-secondary m-0" [title]="resultado.title" appTextOverflowEllipsis>
+                      Opa
+                    </p>
+                  </div>
+                </div>
+
+                <a href="">
+
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //links -->
+    <div class="d-lg-flex d-none">
+      <ul class="navbar-nav d-flex flex-row gap-4">
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/home" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: false }">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/catalogo" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: false }">Catálogo</a>
+        </li>
+      </ul>
+    </div>
+    <!-- dropdown -->
+    <div class="dropdown d-lg-none d-flex">
+      <button class="btn barraPesquisa dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end mt-2" aria-labelledby="dropdownMenuButton" style="top: 100%; right: 0; background-color: #363f4b; border-color: #e4e4e421;">
+        <li><a class="dropdown-item  text-body-primary" href="#">Item 1</a></li>
+        <li><a class="dropdown-item  text-body-primary" href="#">Item 2</a></li>
+        <li><a class="dropdown-item  text-body-primary" href="#">Item 3</a></li>
+      </ul>
+    </div>
 
   </div>
 </nav>

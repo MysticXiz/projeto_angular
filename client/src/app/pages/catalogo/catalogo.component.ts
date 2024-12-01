@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../services/api/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-catalogo',
@@ -7,39 +9,63 @@ import { Component } from '@angular/core';
 
 })
 export class CatalogoComponent {
-  temlivros = true
-  livros: any[] = []
+  livros: any = [{
+    "titulo": "Aleatório",
+    "itens": [
+
+    ]
+  },
+  {
+    "titulo": "Romance",
+    "itens": [
+
+    ]
+  },
+  {
+    "titulo": "Aventura",
+    "itens": [
+
+    ]
+  },
+
+];
+  temlivros: boolean = true;
+  carregando: boolean = true;
+
+
+  constructor(
+    private apiService: ApiService,
+    public router: Router
+  ) {}
+
   ngOnInit(): void {
-    fetch('https://openlibrary.org/search.json?q=bestsellers&limit=20')
-      .then(response => response.json())
-      .then(data => {
-        this.livros = data.docs
-      })
-      .catch(error => {
-        console.error('Erro ao buscar livros:', error)
-      });
-      console.log(this.livros)
-  }
+    this.apiService.getData1().subscribe(
+      (data) => {
+        this.livros[0].itens = data.docs;
+        this.carregando = false;
+      },
+      (error) => {
+        console.error('Erro ao buscar livros:', error);
+      }
+    );
+    this.apiService.getData2().subscribe(
+      (data) => {
+        this.livros[1].itens = data.docs;
+        //console.log(this.livros);
+      },
+      (error) => {
+        console.error('Erro ao buscar livros:', error);
+      }
+    );
+    this.apiService.getData3().subscribe(
+      (data) => {
+        this.livros[2].itens = data.docs;
+        //console.log(this.livros); 
+      },
+      (error) => {
+        console.error('Erro ao buscar livros:', error);
+      }
+    );
 
-
-
-  activeIndex: number = 0;
-
-  nextSlide(): void {
-    if (this.activeIndex < this.livros.length - 1) {
-      this.activeIndex++;
-    }
-  }
-
-
-  prevSlide(): void {
-    if (this.activeIndex > 0) {
-      this.activeIndex--;
-    }
-  }
-
-
-  isActive(index: number): boolean {
-    return index === this.activeIndex;
   }
 }

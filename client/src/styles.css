@@ -1,6 +1,14 @@
 @font-face {
   font-family: 'poppins';
-  src: url('assets/fonts/Poppins-Medium.ttf');
+  src: url('/Poppins-Medium.ttf');
+}
+@font-face {
+  font-family: 'poppins-light';
+  src: url('/Poppins-Light.ttf');
+}
+@font-face {
+  font-family: 'poppins-regular';
+  src: url('/Poppins-Regular.ttf');
 }
 *{
   font-family: 'poppins', Arial, Helvetica, sans-serif;
@@ -8,4 +16,58 @@
 
 .largura{
   width: 50%;
+}
+.card{
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s;
+  border: solid 1px #e4e4e421;
+
+}
+.card:hover{
+  background-color: rgba(185, 0, 0, 0.2) !important;
+  transform: scale(1.02);
+}
+.text-body-primary{
+  color: #d1d5db !important;
+}
+html .text-body-secondary{
+  color: #8b9494 !important;
+
+  font-family: 'poppins-regular' !important;
+
+}
+.listaLivros{
+  --bs-card-spacer-y: 1rem;
+  --bs-card-spacer-x: 1rem;
+  --bs-card-title-spacer-y: 0.5rem;
+  --bs-card-border-width: var(--bs-border-width);
+  --bs-card-border-color: var(--bs-border-color-translucent);
+  --bs-card-border-radius: var(--bs-border-radius);
+  --bs-card-inner-border-radius: calc(var(--bs-border-radius) (v(--bs-border-width)));
+  --bs-card-cap-padding-y: 0.5rem;
+  --bs-card-cap-padding-x: 1rem;
+  --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+  --bs-card-bg: var(--bs-body-bg);
+  --bs-card-img-overlay-padding: 1rem;
+  --bs-card-group-margin: 0.75rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: var(--bs-card-height);
+    color: var(--bs-body-color);
+    word-wrap: break-word;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-clip: border-box;
+    border: solid #e4e4e421 1px;
+    border-radius: var(--bs-card-border-radius);
+}
+h2{
+  pointer-events: none;
+  user-select: none;
+}
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      max-width: 1500px;
+  }
 }

@@ -1,13 +1,55 @@
 .nav-link.active {
    /* Destaca o link ativo */
-  color: #000000; /* Cor personalizada para o link ativo */
+  color: #ffffff; /* Cor personalizada para o link ativo */
+}
+.nav-link:hover{
+  color: white;
+  background-color: rgba(255, 255, 255, 0.186);
+
+}
+.nav-link{
+ color: #d1d5db;
+  padding: 5px 10px;
+  border-radius: 0.3rem;
 }
 .navbar-brand{
-    color: rgb(28, 183, 255);
-    WIDTH: 8%;
-    border-radius: 15%;
+  color: rgb(28, 183, 255);
+  WIDTH: 8%;
+  border-radius: 15%;
 }
-
+.navbar{
+  border-bottom: solid #e4e4e421 1px;
+}
+.barraPesquisa{
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #d1d5db;
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  appearance: none;
+  background-clip: padding-box;
+  border: solid 1px  #e4e4e421;
+  border-radius: var(--bs-border-radius);
+  transition: border-color 0.1s;
+}
+.barraPesquisa:hover{
+  border-color: #d1d5db;
+}
+input::placeholder {
+  color: #8b9494; /* Defina a cor desejada */
+  /* Opcional: personalize o estilo */
+}
 .mudaracor{
     color: rgb(28, 183, 255);
+}
+.caixaPesquisa{
+  width: 100px;
+  height: 10px;
+}
+
+.dropdown-item:hover{
+  background-color: rgba(255, 255, 255, 0.1);
 }

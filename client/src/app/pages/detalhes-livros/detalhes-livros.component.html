@@ -1,0 +1,83 @@
+<app-circulo-carregamento [mostrar]="carregando"></app-circulo-carregamento>
+
+<div *ngIf="!carregando" class="container my-5 rounded border p-5" style="background-color: rgba(255, 255, 255, 0.1); max-width: 1200px;   border-color: #e4e4e421 !important" >
+  <!-- Linha 1 -->
+  <div class="row mb-5">
+    <!-- primeira coluna Linha 1 -->
+    <div class="col-lg-4 col-12 p-0 m-0 d-flex justify-content-center">
+      <div class="container p-0 m-0">
+        <div class="card p-0 m-0 mb-5 overflow-hidden" style="width: 100;">
+          <img [src]="livro.cover?.large || 'img-placeholder.png'" alt="capa do livro" class="img-fluid border border-1 rounded" style="border-color: #e4e4e421 !important; height: 500px;">
+        </div>
+      </div>
+    </div>
+    <!-- segunda coluna Linha 1-->
+    <div class="col-lg-8 col-12  ps-lg-5">
+
+      <!-- titulo e autores -->
+      <div class="container border-bottom p-0 " style="border-color: #e4e4e421 !important;">
+          <h1 class="text-body-primary" [title]="livro.title">{{livro.title | filtrarResultadosApi}}</h1>
+          <p class="text-body-secondary" [title]="formatarNomes(livro.authors, 'name') | filtrarResultadosApi" appTextOverflowEllipsis>{{formatarNomes(livro.authors, 'name') | filtrarResultadosApi}}</p>
+
+      </div>
+      <!-- informações -->
+      <div class="container p-0 mt-4">
+        <div class="d-flex flex-wrap gap-3 p-0 text-center " style="color: white;">
+          <div class="list-group list-group-horizontal">
+            <p class="m-0 text-reset list-group-item">Data</p>
+            <p class="m-0 text-body-secondary list-group-item list-group-item-outline">{{livro.publish_date | filtrarResultadosApi}}</p>
+          </div>
+          <div class="list-group list-group-horizontal">
+            <p class="m-0 text-reset list-group-item">Local</p>
+            <p class="m-0 text-body-secondary list-group-item list-group-item-outline">{{formatarNomes(livro.publish_places, 'name') | filtrarResultadosApi}}</p>
+          </div>
+          <div class="list-group list-group-horizontal">
+            <p class="m-0 text-reset list-group-item">Número de páginas</p>
+            <p class="m-0 text-body-secondary list-group-item list-group-item-outline">{{livro.number_of_pages | filtrarResultadosApi}}</p>
+          </div>
+          <div class="list-group list-group-horizontal">
+            <p class="m-0 text-reset list-group-item">Publicado por</p>
+            <p class="m-0 text-body-secondary list-group-item list-group-item-outline">{{formatarNomes(livro.publishers, 'name') | filtrarResultadosApi}}</p>
+          </div>
+        </div>
+
+      </div>
+
+
+       <!-- descrição/sinopse -->
+      <div class="container p-4 mt-4 ">
+        <h5 class="text-body-primary">Descrição</h5>
+        <p class="text-body-secondary">Indisponível</p>
+      </div>
+
+      <!-- link openlibrary -->
+       <div class="container p-0">
+         <a class="text-body-primary text-uppercase text-decoration-none p-2 px-3 btn-sm rounded border" target="_blank" [href]="livro.url">Abrir na Open Library </a>
+       </div>
+
+    </div>
+  </div>
+  <!-- Linha 2 -->
+  <div class="row position-relative">
+    <!-- primeira coluna Linha 2 -->
+     <div class="col-sm-4 p-0 m-0 d-flex justify-content-center">
+       <section class="container p-0 m-0" >
+         <h5 class="text-body-primary mb-4">Identificadores</h5>
+         <p class="text-body-secondary">Open Library: {{livro.identifiers.openlibrary | filtrarResultadosApi}}</p>
+         <p class="text-body-secondary">ISBN 13: {{livro.identifiers.isbn_13 | filtrarResultadosApi}}</p>
+         <p class="text-body-secondary">ISBN 10: {{livro.identifiers.isbn_10 | filtrarResultadosApi}}</p>
+         <p class="text-body-secondary">OCLC: {{livro.identifiers.oclc | filtrarResultadosApi}}</p>
+       </section>
+     </div>
+     <!-- segunda coluna Linha 2 -->
+      <div class="col-8 d-none d-sm-flex ps-lg-5">
+        <div class="card h-100 p-3 position-absolute" style="background-color: transparent !important; ">
+          <h5 class="pb-3 m-0 text-body-primary">Tags</h5>
+          <div class="d-flex flex-wrap flex-row gap-2 overflow-y-auto h-100 ">
+            <a *ngFor="let subject of livro.subjects" [href]="subject.url" target="_blank" rel="noopener noreferrer" class="btn btn-sm" style="height: fit-content;">{{subject.name}}</a>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
