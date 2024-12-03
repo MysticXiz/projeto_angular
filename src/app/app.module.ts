@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -13,7 +12,7 @@ import { DetalhesLivrosComponent } from './pages/detalhes-livros/detalhes-livros
 import { TextOverflowEllipsisDirective } from './directives/text-overflow-ellipsis/text-overflow-ellipsis.directive';
 import { CirculoCarregamentoComponent } from './components/circulo-carregamento/circulo-carregamento.component';
 import { FiltrarResultadosApiPipe } from './pipes/filtrar-resultados/filtrar-resultados-api.pipe';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,11 +25,13 @@ import { FiltrarResultadosApiPipe } from './pipes/filtrar-resultados/filtrar-res
     TextOverflowEllipsisDirective,
     CirculoCarregamentoComponent,
     FiltrarResultadosApiPipe,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     provideClientHydration()
