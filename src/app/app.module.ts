@@ -15,6 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TooltipDirective } from './directives/tooltip/tooltip.directive';
 import { LivrosSalvosComponent } from './components/livros-salvos/livros-salvos.component';
 import { LivrosSalvosPagComponent } from './pages/livros-salvos-pag/livros-salvos-pag.component';
+import { UppercasePipe } from './pipes/uppercase/uppercase.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +31,7 @@ import { LivrosSalvosPagComponent } from './pages/livros-salvos-pag/livros-salvo
     TooltipDirective,
     LivrosSalvosComponent,
     LivrosSalvosPagComponent,
+    UppercasePipe,
 
   ],
   imports: [

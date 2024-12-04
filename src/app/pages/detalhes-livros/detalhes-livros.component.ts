@@ -13,6 +13,7 @@ export class DetalhesLivrosComponent implements OnInit {
   livro: any = {};
   carregando: boolean = true;
   id: string = ''
+  salvo: boolean = false;
   constructor(private route: ActivatedRoute, private apiService: ApiService, private localStorage: LocalStorageService) {}
 
   ngOnInit() {
@@ -20,6 +21,7 @@ export class DetalhesLivrosComponent implements OnInit {
        this.id = params['id'];
        console.log('ID do livro:', this.id);
        this.carregarDetalhesLivro(this.id);
+       this.verificarSalvamento(this.id);
      });
 
   }
@@ -45,7 +47,22 @@ export class DetalhesLivrosComponent implements OnInit {
      }
   }
   salvarLivros(){
-    this.localStorage.salvarId(this.id)
-    console.log("id salvo"+ this.id)
+    if (this.salvo === true){
+      this.deletarDalista(this.id)
+      this.salvo = false;
+    }else{
+      this.localStorage.salvarId(this.id)
+      console.log("id salvo"+ this.id)
+      this.salvo = true;
+    }
+  }
+  verificarSalvamento(id: string): void {
+    const idsSalvos = this.localStorage.getIds();
+    this.salvo = idsSalvos.includes(id);
+  }
+  deletarDalista(id: string): void {
+    // Remove o ID específico da lista de IDs armazenados
+    this.localStorage.removerId(id);
+    // Atualiza a lista de IDs e detalhes dos livros após remoção
   }
 }

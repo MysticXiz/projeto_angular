@@ -1,6 +1,6 @@
 <nav class="navbar p-3">
   <div class="container">
-    <a href="#" class="navbar-brand" href="#" routerLink="/home">Booksopen</a>
+    <a href="#" class="navbar-brand" href="#" routerLink="/home" >{{tituloHeader | uppercase}}</a>
     <!-- barra de pesquisa -->
     <div class="col-lg-4 d-lg-flex d-none">
       <button class="barraPesquisa text-start" data-bs-toggle="modal" data-bs-target="#searchModal">
@@ -61,7 +61,7 @@
                       </h5>
                     </a>
                     <p class="text-body-secondary m-0" [title]="resultado.title" appTextOverflowEllipsis>
-                      Opa
+                      {{resultado.author_name | filtrarResultadosApi}}
                     </p>
                   </div>
                 </div>

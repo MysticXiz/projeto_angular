@@ -8,7 +8,7 @@ import { ApiService } from '../../services/api/api.service';
 export class HeaderComponent implements AfterViewInit {
   @ViewChild('searchInput') searchInput!: ElementRef;
   constructor(private apiService: ApiService) {}
-
+  tituloHeader: string = 'Booksopen';
   resultados: any = [];
   carregando: boolean = false;
   pesquisarTimeout: any = null;
