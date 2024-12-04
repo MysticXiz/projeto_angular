@@ -26,5 +26,7 @@ export class HomeComponent{
        console.error('Erro ao buscar livros:', error);
      }
    );
+   
  }
+
 }

@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CatalogoComponent } from './pages/catalogo/catalogo.component';
-import { LoginComponent } from './pages/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DetalhesLivrosComponent } from './pages/detalhes-livros/detalhes-livros.component';
@@ -13,18 +12,23 @@ import { TextOverflowEllipsisDirective } from './directives/text-overflow-ellips
 import { CirculoCarregamentoComponent } from './components/circulo-carregamento/circulo-carregamento.component';
 import { FiltrarResultadosApiPipe } from './pipes/filtrar-resultados/filtrar-resultados-api.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TooltipDirective } from './directives/tooltip/tooltip.directive';
+import { LivrosSalvosComponent } from './components/livros-salvos/livros-salvos.component';
+import { LivrosSalvosPagComponent } from './pages/livros-salvos-pag/livros-salvos-pag.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CatalogoComponent,
-    LoginComponent,
     HeaderComponent,
     FooterComponent,
     DetalhesLivrosComponent,
     TextOverflowEllipsisDirective,
     CirculoCarregamentoComponent,
     FiltrarResultadosApiPipe,
+    TooltipDirective,
+    LivrosSalvosComponent,
+    LivrosSalvosPagComponent,
 
   ],
   imports: [

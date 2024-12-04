@@ -1,0 +1,37 @@
+.mt-1{
+  margin-top: 16px !important;
+}
+.mt-2{
+  margin-top: 3.5rem !important;
+}
+.card-body{
+  padding: 0;
+}
+.lixeira{
+  z-index: -1;
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition:opacity 0.5s;
+}
+.cardsSalvos:hover .lixeira{
+  z-index: 1;
+  bottom: 0;
+  transform: translateY(-3px);
+  opacity: 1;
+}
+.cardsSalvos:hover .titulo{
+  transform: translateY(0px);
+}
+.titulo{
+  transform: translateY(25px);
+  transition: all 0.4s;
+}.card:hover{
+  transform: none;
+}
+.btn{
+  color: white;
+}
+.btn:hover{
+  background-color: rgba(255, 255, 255, 0.186);
+}

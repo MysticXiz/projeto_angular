@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  limite: number = 20;
+  limite: number = 18;
   private apiUrl1 = `https://openlibrary.org/search.json?q=random&limit=${this.limite}`;
   private apiUrl2 = `https://openlibrary.org/search.json?q=romance&limit=${this.limite}`;
   private apiUrl3 = `https://openlibrary.org/search.json?q=horror&limit=${this.limite}`;

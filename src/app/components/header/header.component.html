@@ -1,6 +1,6 @@
 <nav class="navbar p-3">
   <div class="container">
-    <a href="#" class="navbar-brand" href="#" routerLink="/home">HOME</a>
+    <a href="#" class="navbar-brand" href="#" routerLink="/home">Booksopen</a>
     <!-- barra de pesquisa -->
     <div class="col-lg-4 d-lg-flex d-none">
       <button class="barraPesquisa text-start" data-bs-toggle="modal" data-bs-target="#searchModal">
@@ -66,9 +66,6 @@
                   </div>
                 </div>
 
-                <a href="">
-
-                </a>
               </div>
             </div>
           </div>
@@ -80,11 +77,15 @@
       <ul class="navbar-nav d-flex flex-row gap-4">
         <li class="nav-item">
           <a class="nav-link" href="#" routerLink="/home" routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: false }">Home</a>
+            [routerLinkActiveOptions]="{ exact: false }">Início</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" routerLink="/catalogo" routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: false }">Catálogo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/salvos" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: false }">Livros Salvos</a>
         </li>
       </ul>
     </div>
@@ -93,9 +94,9 @@
       <button class="btn barraPesquisa dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
       </button>
       <ul class="dropdown-menu dropdown-menu-end mt-2" aria-labelledby="dropdownMenuButton" style="top: 100%; right: 0; background-color: #363f4b; border-color: #e4e4e421;">
-        <li><a class="dropdown-item  text-body-primary" href="#">Item 1</a></li>
-        <li><a class="dropdown-item  text-body-primary" href="#">Item 2</a></li>
-        <li><a class="dropdown-item  text-body-primary" href="#">Item 3</a></li>
+        <li><a class="dropdown-item  text-body-primary" routerLink="/home">Início</a></li>
+        <li><a class="dropdown-item  text-body-primary" routerLink="/catalogo">Catálogo</a></li>
+        <li><a class="dropdown-item  text-body-primary" routerLink="/salvos">Livros Salvos</a></li>
       </ul>
     </div>
 

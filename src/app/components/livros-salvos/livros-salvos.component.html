@@ -1,0 +1,34 @@
+<div class="d-none d-xl-flex position-sticky top-0 mt-1">
+  <div class="listaLivros col-12">
+    <div class="card-header d-flex justify-content-start px-3 py-0"
+      style="background-color: transparent; border-bottom: solid #e4e4e421 1px;">
+      <p class="py-2 m-0 " style="color: #d1d5db; font-size: 16px;">
+        Livros salvos
+      </p>
+    </div>
+    <div class="card-body d-flex flex-column justify-content-around gap-2 p-2 " *ngIf="livros_info">
+      <div class="d-flex card d-flex flex-row cardsSalvos" *ngFor="let livro of livros_info " style="height: 100px;">
+        <div class="col-3 col-xxl-2">
+          <img [src]="livro.cover?.large || 'img-placeholder.png'" class="img-fluid rounded-start" alt="Capa do livro" style="height: 100%; width: 100%"/>
+        </div>
+        <div class="col-9 col-xxl-10 d-flex p-2 gap-2">
+          <div class="card-body d-flex flex-column overflow-hidden justify-content-center">
+            <a [routerLink]="['/livros', livro.identifiers.openlibrary[0]] " class="text-decoration-none">
+              <h6 class="text-body-primary m-0" [title]="livro.title">
+                {{ livro.title}}
+              </h6>
+            </a>
+              <button class="lixeira btn  mt-auto align-self-end" (click)="deletarDalista(livro.identifiers.openlibrary[0])">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill= "currentColor" width= "17" height= "17"  viewBox="0 0 512 512"><path d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 112h352"/><path d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+
+              </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="d-flex justify-content-center" *ngIf="livros_info.length == 0">
+      <p style="color: gray;">Lista Vazia</p>
+    </div>
+  </div>
+</div>

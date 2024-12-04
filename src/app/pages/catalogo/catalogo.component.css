@@ -2,124 +2,43 @@
   background-color: black;
   color: white;
 }
-
-.catalogo-home {
-    position: relative;
-    height: auto;
-    min-height: 500px;
-    min-width: 450px;
-    object-fit: cover;
-
+*{
+  text-decoration: none;
 }
-
-
-
-.img-fluid {
-    filter: brightness(0.7) blur(6px);
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    position: relative;
+body{
+  background: #1f2937;
 }
-
-.fs-1 {
-    position: absolute;
-    top: 15%; /* Ajuste este valor conforme necessário */
-    left: 15%; /* Ajuste este valor conforme necessário */
-    color: white; /* Certifique-se de que o texto é visível sobre a imagem */
-    z-index: 3; /* Garante que o texto fique por cima da imagem */
-    font-size: 5vw;
-
+.card-img-top{
+  height: 240px;
 }
-
-
-
-
-.fs-2 {
-  position: absolute;
-  top: 21%; /* Ajuste este valor conforme necessário */
-  left: 15%; /* Ajuste este valor conforme necessário */
-  color: white; /* Certifique-se de que o texto é visível sobre a imagem */
-  z-index: 3; /* Garante que o texto fique por cima da imagem */
-  font-size: 1000%;
+.cardlink{
+  width: 200px;
 }
-
-.fs-3 {
-  position: absolute;
-  top: 30%; /* Ajuste este valor conforme necessário */
-  left: 15%; /* Ajuste este valor conforme necessário */
-  color: white; /* Certifique-se de que o texto é visível sobre a imagem */
-  z-index: 3; /* Garante que o texto fique por cima da imagem */
-  font-size: 500%;
+.card-footer .text-body-primary,
+.card-footer .text-body-secondary {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
 }
-
-
-
-
-.divider {
-  border: none; /* Remove a borda padrão */
-  height: 3px; /* Altura da linha */
-  background-color: rgb(255, 255, 255); /* Cor da linha */
-  margin: 10px 0; /* Espaçamento acima e abaixo da linha */
-  width: 30%; /* Largura da linha */
-  position: absolute; /* Para posicionar a linha corretamente */
-  left: 10%; /* Para centralizar a linha */
-  top: 20%;
-  z-index: 3;
+.mt-1{
+  margin-top: 16px !important;
 }
-
-
-
-@media (max-width: 1200px) {
-  .fs-1 {
-    font-size: 10vw; /* Reduz o tamanho da fonte em telas menores */
-    top: 10%; /* Ajuste este valor conforme necessário */
-    left: 15%;
-
-  }
-
-  .fs-2 {
-    font-size: 8vw; /* Reduz o tamanho da fonte em telas menores */
-    top: 15%; /* Ajuste este valor conforme necessário */
-    left: 15%;
-  }
-
-  .imagem-sobreposta {
-      width: 8%;
-  }
-
-  .titulo {
-      font-size: 6vw;
-  }
-
-  .descricao {
-      font-size: 4vw;
-  }
+.mt-2{
+  margin-top: 3.5rem !important;
 }
-
-@media (max-width: 600px){
-  .fs-1 {
-    font-size: 4vw; /* Reduz o tamanho da fonte em telas menores */
-    top: 5%; /* Ajuste este valor conforme necessário */
-    left: 11%;
+.row{
+  margin-right: 0;
+  margin-left: 0;
 }
-
-  .fs-2 {
-    font-size: 2vw; /* Reduz o tamanho da fonte em telas menores */
-    top: 9%; /* Ajuste este valor conforme necessário */
-    left: 10%;
-  }
-
-  .divider {
-    width: 25%;
-    top: 8%;
-  }
-
-  .fs-3 {
-    font-size: 3%; /* Reduz o tamanho}*/
-    top: 12%;
-    left: 3%;
-    right: 3%;
+.textoLivros{
+  font-size: 1.2rem;
+  color: gray;
 }
-
+.height{
+  height: 75vh;
+}
+.card-header{
+  font-size: 1.6em;
+  color: rgb(80, 80, 80);
 }

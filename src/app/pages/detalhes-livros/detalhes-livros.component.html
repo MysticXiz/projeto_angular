@@ -6,18 +6,18 @@
     <!-- primeira coluna Linha 1 -->
     <div class="col-lg-4 col-12 p-0 m-0 d-flex justify-content-center">
       <div class="container p-0 m-0">
-        <div class="card p-0 m-0 mb-5 overflow-hidden" style="width: 100;">
+        <div class="card p-0 m-0 overflow-hidden" style="width: 100;">
           <img [src]="livro.cover?.large || 'img-placeholder.png'" alt="capa do livro" class="img-fluid border border-1 rounded" style="border-color: #e4e4e421 !important; height: 500px;">
         </div>
       </div>
     </div>
     <!-- segunda coluna Linha 1-->
-    <div class="col-lg-8 col-12  ps-lg-5">
+    <div class="col-lg-8 col-12 ps-lg-5 d-flex flex-column">
 
       <!-- titulo e autores -->
       <div class="container border-bottom p-0 " style="border-color: #e4e4e421 !important;">
-          <h1 class="text-body-primary" [title]="livro.title">{{livro.title | filtrarResultadosApi}}</h1>
-          <p class="text-body-secondary" [title]="formatarNomes(livro.authors, 'name') | filtrarResultadosApi" appTextOverflowEllipsis>{{formatarNomes(livro.authors, 'name') | filtrarResultadosApi}}</p>
+          <h1 class="text-body-primary" [appTooltip]="livro.title">{{livro.title | filtrarResultadosApi}}</h1>
+          <p class="text-body-secondary" [appTooltip]="formatarNomes(livro.authors, 'name') | filtrarResultadosApi" appTextOverflowEllipsis>{{formatarNomes(livro.authors, 'name') | filtrarResultadosApi}}</p>
 
       </div>
       <!-- informações -->
@@ -51,8 +51,9 @@
       </div>
 
       <!-- link openlibrary -->
-       <div class="container p-0">
+       <div class="container p-0 mt-auto mb-2 d-flex justify-content-between">
          <a class="text-body-primary text-uppercase text-decoration-none p-2 px-3 btn-sm rounded border" target="_blank" [href]="livro.url">Abrir na Open Library </a>
+         <button (click)="salvarLivros()">Salvar</button>
        </div>
 
     </div>

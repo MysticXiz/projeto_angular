@@ -1,37 +1,36 @@
 <app-circulo-carregamento [mostrar]="carregando"></app-circulo-carregamento>
-<main class="container mt-1" *ngIf="!carregando">
+<main class="container mt-2" *ngIf="!carregando">
+ 
+  <!-- cards de bestsellers -->
   <div class="row">
-    <div class="col-xl-9 mt-1 px-0">
-      <h2 class="mb-3" style="margin-left: 8px; color: #d1d5db;">Best Sellers</h2>
-      <div class="row col">
-        <div *ngFor="let livro of livros" class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2 p-1">
-          <a href="#" [routerLink]="['/livros', livro.edition_key[0]]" [title]="livro.title">
-            <div class="card" appTextOverflowEllipsis>
-              <img *ngIf="livro.cover_i" [src]=" 'https://covers.openlibrary.org/b/id/' + livro.cover_i +'-L.jpg'" class="card-img-top" alt="Capa do livro"/>
-              <div class="card-footer d-flex flex-column justify-content-between">
-                <div class="d-flex flex-column">
-                  <small class="text-body-primary fs-6">{{livro.title | filtrarResultadosApi}}</small>
-                  <small class="text-body-secondary">{{livro.author_name | filtrarResultadosApi}}</small>
+    <h2 class="my-3" style="margin-left: 8px; color: #d1d5db">Best Sellers</h2>
+    <div class="row">
+      <div class="col-xl-9 mt-1 px-0">
+        <div class="row col">
+          <div *ngFor="let livro of livros" class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2 p-1">
+            <a href="#" [routerLink]="['/livros', livro.edition_key[0]]" [appTooltip]="livro.title">
+              <div class="card" appTextOverflowEllipsis>
+                <img *ngIf="livro.cover_i" [src]="
+                    'https://covers.openlibrary.org/b/id/' +
+                    livro.cover_i +
+                    '-L.jpg'
+                  " class="card-img-top" alt="Capa do livro" />
+                <div class="card-footer d-flex flex-column justify-content-between">
+                  <div class="d-flex flex-column">
+                    <small class="text-body-primary fs-6">{{
+                      livro.title | filtrarResultadosApi
+                      }}</small>
+                    <small class="text-body-secondary">{{
+                      livro.author_name | filtrarResultadosApi
+                      }}</small>
+                  </div>
                 </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    <div *ngIf="temlivros" class="d-none d-xl-flex col-3 height position-sticky top-0 mt-2">
-      <div class="listaLivros col-12 mt-1">
-        <div class="card-header d-flex justify-content-start px-3 py-0" style="background-color: transparent; border-bottom: solid #e4e4e421 1px;">
-          <p class="py-2 m-0 " style="color: #d1d5db; font-size: 16px;">
-            Livros salvos
-          </p>
-        </div>
-        <div class="card-body">
-          <blockquote class="blockquote mb-0 d-flex justify-content-center">
-            <p class="textoLivros mt-2">Lista vazia</p>
-          </blockquote>
-        </div>
-      </div>
+      <app-livros-salvos class="col-3"></app-livros-salvos>
     </div>
   </div>
 </main>
