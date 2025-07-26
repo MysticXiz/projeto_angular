@@ -112,5 +112,4 @@ Este projeto é licenciado sob a [MIT License](LICENSE).
 
 ---
 
-Feito por [Seu Nome].
 
